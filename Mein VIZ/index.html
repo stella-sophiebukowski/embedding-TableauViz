@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NYT Games Competition</title>
+    <!-- Skeleton CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      crossorigin="anonymous"
+    />
+    <!-- Tableau Embedding API v3 -->
+    <script
+      type="module"
+      src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+    ></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <h1>Who's the BEST at NYT Games</h1>
+    <h2>Clear Winner: Pete, Winner of Hearts: Stella</h2>
+
+    <!-- Filter nach Namen -->
+    <fieldset id="name_filter_group">
+      <legend>Nach Namen filtern</legend>
+      <input
+        type="text"
+        placeholder="Name eingeben (z.B. Pete)"
+        id="nameInput"
+      />
+      <input type="button" value="Name filtern" id="filter_name" />
+      <input
+        type="button"
+        value="Namensfilter zurücksetzen"
+        id="clear_name_filter"
+      />
+    </fieldset>
+
+    <!-- Allgemeine Steuerung -->
+    <fieldset id="control_buttons">
+      <legend>Aktionen</legend>
+      <input type="button" value="Rückgängig (Undo)" id="undo" />
+    </fieldset>
+
+    <!-- Visualisierung -->
+    <div class="content">
+      <tableau-viz
+        id="tableauViz"
+        src="https://public.tableau.com/views/NewYorkTimesGamesCompetition/Dashie"
+        toolbar="bottom"
+        height="1927px"
+        width="100%"
+      >
+      </tableau-viz>
+    </div>
+  </body>
+</html>
