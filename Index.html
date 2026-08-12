@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2S: Embedding</title>
+    <!--Link to Skeleton Style Sheet which makes it look nicer-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
+    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+</head>
+</body>
+<script src="./app.js" defer></script>
+
+<h1> Who's the BEST at NYT Games </h1>
+<h2> Clear Winner: Pete, Winner of Hearts: Stella </h2>
+<fieldset id="first_row_of_buttons">
+        <legend>Filter the view!</legend>
+        <input type="button" value="Oregon and Washington Only" id="oregon_and_washington" />
+        <input type="button" value="Clear Filter" id="clear_filter" />
+        <input type="button" value="Undo" id="undo" />
+      </fieldset>
+
+<fieldset id="second_row_of_buttons">
+        <legend>Filter cities for a range of values!</legend>
+        <input type="number" placeholder="min value" id="minValue" />
+        <input type="number" placeholder="max value" id="maxValue" />
+        <input type="button" value="Filter Range" id="filter_range" />
+      </fieldset>
+
+<div class = "content" > 
+<!-- This Devider is where we put all of our embedding -->
+<tableau-viz
+id = "tableauViz"
+src = "https://public.tableau.com/views/Superstore_embedded_800x800/Overview" 
+toolbar = "bottom"
+height = "800vh"
+width="100vw"
+></tableau-viz>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</body>
+
+</tableau-viz>
+</body>
+</html>
+
